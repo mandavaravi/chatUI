@@ -48,7 +48,7 @@ export class MessageFormComponent implements OnInit {
   ngOnInit() {}
 
   chipChange(event : any) {
-    alert(event.value)
+    // alert(event.value)
   }
   toggleSelection(chip: any) {
     this.selectedTopics[chip.value] = !this.selectedTopics[chip.value];
@@ -69,36 +69,21 @@ export class MessageFormComponent implements OnInit {
   public sendMessage(): void {
     this.messages = this.dialogFlowService.getLocalMessages();
     if (this.currContent && this.currContent.trim() != '') {
-      // alert(this.currContent);
       this.message.timestamp = this.dialogFlowService.format24Hour(); //new Date();
       this.message.content = this.currContent;
       this.currContent = '';
       this.messages.push(this.message);
       this.dialogFlowService.updateLocalMessages(this.message);
 
-      // // alert(JSON.stringify(this.messages));
-      alert('before api'+ this.getSelectedTopics());
       this.dialogFlowService
         .getResponse(this.message.content, this.getSelectedTopics())
         .subscribe((res) => {
-          alert('inside api');
-          // this.messages.push(
-          //   new Message(
-          //     res.result.fulfillment.speech,
-          //     '../../../assets/images/bot.png',
-          //     this.dialogFlowService.format24Hour(),
-          //     true
-          //   )
-          // );
           alert(JSON.stringify(res));
+          let temp = res as Message;
+          temp.timestamp =  this.dialogFlowService.format24Hour();
+          // {"content":"Is both an option? If so, I saw both! But I do love beethoven's 5","timestamp":"","avatar":"","isBot":true}
           this.dialogFlowService.updateLocalMessages(res);
         });
-      alert('after api');
-
-      // alert(
-      //   'mess form  - ' +
-      //     JSON.stringify(this.dialogFlowService.getLocalMessages())
-      // );
     }
   }
 }

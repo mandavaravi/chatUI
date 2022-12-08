@@ -1,5 +1,5 @@
 <div class="chatcontrol">
-  <div class="row" style="width: inherit; margin: 0 !important;">
+  <div class="row" style="width: inherit; margin: 0 !important;box-shadow: #e1e1e1 0px -4px 5px 0px;">
     <!-- <mat-chip-list selectable multiple>
       <mat-chip
         color="accent"
@@ -13,7 +13,7 @@
         {{ option }}
       </mat-chip>
     </mat-chip-list> -->
-    <mat-chip-listbox selectable (change)="chipChange($event)">
+    <mat-chip-listbox selectable (change)="chipChange($event)" style="margin-left: 5px;">
       <mat-chip-option *ngFor="let option of topics" #c class="mat-chip-category" color="warn">
         {{ option }}
       </mat-chip-option>
@@ -32,8 +32,9 @@
           [(ngModel)]="currContent" />
         </div>
         <div class="firstcol-1">
-          <button mat-mini-fab class="btn btn-primary sendbtn" (click)="sendMessage()" style="background-color: #267fdb;">
-            <mat-icon>send</mat-icon>
+          <!-- mat-mini-fab  -->
+          <button mat-raised-button class="btn btn-primary sendbtn" (click)="sendMessage()" style="background-color: #267fdb;">
+            <mat-icon style="color: white; font-size: 20px;">send</mat-icon>
           </button>
         </div>
       </div>
