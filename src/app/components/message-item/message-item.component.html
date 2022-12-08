@@ -1,0 +1,31 @@
+<li class="list-group-item" *ngIf="message.isBot">
+  <!-- <img [src]="message.avatar" class="avatar" /> -->
+  <div class="message">
+    <div class="message-span">
+      <div style="margin: 5px;">
+        {{ message.content }}
+      </div>
+    </div>
+  </div>
+  <div class="timeform">
+    <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
+    <span class="timestamp">at {{ message.timestamp }}</span>
+    <!-- | date: 'dd/MM/yyyy'  -->
+  </div>
+</li>
+
+<li class="list-group-item user-message" style="justify-content: end" *ngIf="!message.isBot">
+  <div class="message-user">
+    <div class="message-span">
+      <div style="margin: 5px;">
+        {{ message.content }}
+      </div>
+    </div>
+  </div>
+  <!-- <img [src]="message.avatar" class="avatar-right" /> -->
+  <div class="timeform-1" style="text-align: end;">
+    <!-- <i class="fa fa-clock-o" aria-hidden="true"></i> -->
+    <span class="timestamp">at {{ message.timestamp }}</span>
+    <!--  | date: 'dd/MM/yyyy'  -->
+  </div>
+</li>

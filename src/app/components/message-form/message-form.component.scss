@@ -1,0 +1,85 @@
+.chatcontrol {
+  // float: left;
+  width: 100%;
+  height: 40px;
+
+  .chatinput {
+    // width: 80%;
+    // float: left;
+    border-radius: 3px;
+    height: 100% !important;
+  }
+
+  .button-wrapper {
+    width: 20%;
+  }
+
+  .sendbtn {
+    // width: 20%;
+    // float: left;
+    // border-radius: 3px;
+    // text-transform: uppercase;
+    // height: inherit;
+  }
+
+  /** No CSS for this example */
+  mat-form-field {
+    width: 100%;
+  }
+
+  .mat-select-trigger {
+    height: fit-content;
+  }
+
+  .mat-chip {
+    border-radius: 5px !important;
+  }
+
+  .mat-chip-category {
+    background-color: #e6e6e6 !important;
+  }
+
+  .mat-chip-selected {
+    background-color: #228fee !important;
+    color: white;
+  }
+
+  ::ng-deep .mat-mdc-form-field-infix {
+    padding: 0;
+    padding-top: 5px;
+  }
+
+  ::ng-deep .mat-mdc-form-field-flex {
+    height: 50px;
+
+    .mat-mdc-form-field-infix {
+      padding: 0;
+      padding-top: 5px;
+    }
+  }
+
+  ::ng-deep  .mat-mdc-chip-selected {
+    color: blue !important;
+  }
+
+  
+  ::ng-deep .mdc-evolution-chip--selected {
+    // .mat-mdc-chip-action-label{
+    // color: blue !important;
+    // }
+
+    .mdc-evolution-chip__action {
+      background-color: #267fdb;
+      border-radius: 25px;
+    }
+  }
+
+  .firstcol {
+    width: 90%;
+  }
+
+  .firstcol-1 {
+    width: 10%;
+    text-align: end;
+  }
+}

@@ -1,0 +1,42 @@
+<div class="chatcontrol">
+  <div class="row" style="width: inherit; margin: 0 !important;">
+    <!-- <mat-chip-list selectable multiple>
+      <mat-chip
+        color="accent"
+        #c="matChip"
+        *ngFor="let option of topics"
+        [value]="option"
+        (click)="toggleSelection(c); c.toggleSelected();"
+        class="mat-chip-category"
+      >
+        <mat-icon *ngIf="c.selected">check</mat-icon>
+        {{ option }}
+      </mat-chip>
+    </mat-chip-list> -->
+    <mat-chip-listbox selectable (change)="chipChange($event)">
+      <mat-chip-option *ngFor="let option of topics" #c class="mat-chip-category" color="warn">
+        {{ option }}
+      </mat-chip-option>
+      <!-- <mat-chip-option>Two fish</mat-chip-option>
+      <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+      <mat-chip-option color="warn">Warn fish</mat-chip-option> -->
+    </mat-chip-listbox>
+  </div>
+
+  <div class="row"
+    style="width: inherit; margin: 0 !important; margin-top: 10px !important; margin-bottom: 10px !important;">
+    <mat-form-field>
+      <div class="row" style="justify-content: end; display: flex;">
+        <div class="firstcol">
+          <input matInput type="text" class="form-control chatinput" (keyup.enter)="sendMessage()"
+          [(ngModel)]="currContent" />
+        </div>
+        <div class="firstcol-1">
+          <button mat-mini-fab class="btn btn-primary sendbtn" (click)="sendMessage()" style="background-color: #267fdb;">
+            <mat-icon>send</mat-icon>
+          </button>
+        </div>
+      </div>
+    </mat-form-field>
+  </div>
+</div>

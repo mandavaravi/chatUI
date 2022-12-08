@@ -1,0 +1,87 @@
+// .message {
+//   font-size: 1em;
+//   font-style: italic;
+//   font-weight: 400;
+// }
+
+// .timeform {
+//   float: left;
+//   width: 100%;
+
+//   // i {
+//   //   margin-left: 20px;
+//   // }
+
+//   .timestamp {
+//     font-size: 0.6em;
+//   }
+// }
+
+// .avatar {
+//   width: 50px;
+//   margin-right: 20px;
+// }
+
+// .avatar-right {
+//   width: 50px;
+//   margin-left: 20px;
+// }
+
+
+.list-group-item {
+border-bottom: 1px solid lightgray;
+
+  .message {
+    width: 50%;
+    font-size: 18px;
+    // font-style: italic;
+    font-weight: 400;
+    padding: 5px 10px 5px 10px;
+  }
+  .message-user {
+    width: 50%;
+    font-size: 18px;
+    // font-style: italic;
+    font-weight: 400;
+    text-align: end;
+    // padding-right: 10px;
+    padding: 5px 10px 5px 10px;
+    margin-left: 45%;
+    // background-color: #1e61c3;
+    // border-radius: 10px;
+    // color: white;
+  }
+
+  .message-span {
+    background-color: #1e61c3;
+    border-radius: 4px;
+    color: white;
+  }
+  
+  
+.timeform {
+  width: 100%;
+  .timestamp {
+    font-size: 0.6em;
+  }
+}
+
+.timeform-1 {
+  width: 100%;
+  .timestamp {
+    padding-right: 10px;
+    font-size: 0.6em;
+  }
+}
+
+.avatar {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.avatar-right {
+  width: 50px;
+  margin-left: 20px;
+}
+
+}
